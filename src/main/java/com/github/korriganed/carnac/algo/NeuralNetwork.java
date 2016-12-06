@@ -1,10 +1,10 @@
-package net.korriganed.carnac.algo;
+package com.github.korriganed.carnac.algo;
 
 import java.util.List;
 
-import net.korriganed.carnac.struct.INeuronFactory;
-import net.korriganed.carnac.struct.Layer;
-import net.korriganed.carnac.struct.Neuron;
+import com.github.korriganed.carnac.struct.INeuronFactory;
+import com.github.korriganed.carnac.struct.Layer;
+import com.github.korriganed.carnac.struct.Neuron;
 
 public class NeuralNetwork<D, R> {
 

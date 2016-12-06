@@ -1,4 +1,4 @@
-package net.korriganed.carnac;
+package com.github.korriganed.carnac;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

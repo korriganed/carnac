@@ -1,4 +1,4 @@
-package net.korriganed.carnac.struct;
+package com.github.korriganed.carnac.struct;
 
 import java.util.ArrayList;
 
@@ -21,6 +21,9 @@ public class Layer {
 
 	public void addNeuron(Neuron n) {
 		this.neurons.add(n);
+		if (!isInput()) {
+			previous.getNeurons().stream().forEach(input -> n.initializeWeight(input));
+		}
 	}
 
 	public boolean isInput() {
@@ -29,6 +32,10 @@ public class Layer {
 
 	public boolean isOutput() {
 		return next == null;
+	}
+
+	public ArrayList<Neuron> getNeurons() {
+		return neurons;
 	}
 
 }

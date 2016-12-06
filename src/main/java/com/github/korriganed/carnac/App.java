@@ -1,4 +1,4 @@
-package net.korriganed.carnac;
+package com.github.korriganed.carnac;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -7,10 +7,7 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
 	public static void main(String[] args) {
 		System.out.println("start...");
@@ -24,8 +21,8 @@ public class App {
 			for (int row = 0; row < small.getWidth(); ++row) {
 				for (int column = 0; column < small.getHeight(); ++column) {
 					int pixel = small.getRGB(row, column);
-					int shadeOfgrey = (pixel >> 16) & 0xff;
-					pixels.add(shadeOfgrey);
+					int shadeOfgray = (pixel >> 16) & 0xff;
+					pixels.add(shadeOfgray);
 				}
 			}
 		} catch (IOException e) {

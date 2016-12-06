@@ -1,4 +1,4 @@
-package net.korriganed.carnac.struct.activation;
+package com.github.korriganed.carnac.struct.activation;
 
 import java.util.List;
 
