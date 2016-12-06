@@ -1,11 +1,13 @@
 package net.korriganed.carnac.struct.activation;
 
+import java.util.List;
+
 public class Logistic implements IActivationFunction {
 
 	@Override
-	public Double process(Double... values) {
-		// TODO Auto-generated method stub
-		return null;
+	public Double process(List<Double> values) {
+		Double sum = values.stream().reduce(0., (a, b) -> a + b);
+		return 1 / (1 + Math.exp(-sum));
 	}
 
 }
