@@ -12,7 +12,7 @@ public class Heaviside implements IActivationFunction {
 
 	@Override
 	public Double process(List<Double> values) {
-		return (values.stream().reduce(0., (a, b) -> a + b) > this.threshold) ? 1. : 0.;
+		return (values.stream().reduce(0., Double::sum) > this.threshold) ? 1. : 0.;
 	}
 
 }

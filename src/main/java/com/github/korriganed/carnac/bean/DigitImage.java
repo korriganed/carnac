@@ -7,7 +7,7 @@ import com.github.korriganed.carnac.data.Target;
 
 public class DigitImage {
 
-	private List<Integer> shadesOfGray;
+	private List<Boolean> blackOrWhitePixels;
 	private Integer digit;
 
 	public void setDigit(Integer digit) {
@@ -19,13 +19,12 @@ public class DigitImage {
 		return digit;
 	}
 
-	public void setShadesOfGray(List<Integer> shadesOfGray) {
-		this.shadesOfGray = shadesOfGray;
+	public void setShadesOfGray(List<Boolean> blackOrWhitePixels) {
+		this.blackOrWhitePixels = blackOrWhitePixels;
 	}
 
 	@Feature
-	public List<Integer> getShadesOfGray() {
-		return shadesOfGray;
+	public List<Boolean> getBlackOrWhitePixels() {
+		return blackOrWhitePixels;
 	}
-
 }
